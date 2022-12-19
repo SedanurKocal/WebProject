@@ -17,6 +17,7 @@ namespace LayerE.Concrate
         public string YTContent { get; set; }
         public DateTime YTDate { get; set; }
         public bool YTStatus { get; set; }
+        //
         public int YBID { get; set; }
         public YBlog YBlog { get; set; }
 

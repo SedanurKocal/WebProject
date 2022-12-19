@@ -20,12 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstract\" />
-    <Folder Include="Repositories\" />
+    <ProjectReference Include="..\LayerE\LayerE.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LayerE\LayerE.csproj" />
+    <Folder Include="EntityFramework\" />
   </ItemGroup>
 
 </Project>

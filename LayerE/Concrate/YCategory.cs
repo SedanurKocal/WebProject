@@ -14,6 +14,7 @@ namespace LayerE.Concrate
         public string NameYCategory { get; set; }
         public string DescriptionYCategory { get; set; }
         public bool StatusYCategory { get; set; }
+        //
         public List<YBlog> YBlogs { get; set; }
     }
 }

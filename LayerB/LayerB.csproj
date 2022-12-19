@@ -11,4 +11,9 @@
     <ProjectReference Include="..\LayerE\LayerE.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Abstract\" />
+    <Folder Include="ValidationRules\" />
+  </ItemGroup>
+
 </Project>

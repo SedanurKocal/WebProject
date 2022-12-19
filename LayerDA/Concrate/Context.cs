@@ -12,7 +12,7 @@ namespace LayerDA.Concrate
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-II3JBPE\\SQLEXPRESS01;database=YemekBlogDB1; integrated security=true;"); 
+            optionsBuilder.UseSqlServer("server=DESKTOP-II3JBPE\\SQLEXPRESS01;database=BlogumDB; integrated security=true;"); 
         }
         public DbSet<YAbout> YAbouts { get; set; }
         public DbSet<YBlog> YBlogs { get; set; }

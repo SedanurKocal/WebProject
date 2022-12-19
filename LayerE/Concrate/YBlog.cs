@@ -17,6 +17,7 @@ namespace LayerE.Concrate
         public string YBImage { get; set; }
         public string YBCreateDate { get; set; }
         public bool YBStatus { get; set; }
+        //
         public int IdYCategory { get; set; }
         public YCategory YCategory { get; set; }
         public List<YThought> YThoughts { get; set; }
