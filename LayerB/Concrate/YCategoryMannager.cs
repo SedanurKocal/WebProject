@@ -8,34 +8,39 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace LayerB.Concrate
-{
+ {
     public class YCategoryMannager : IYCategoryService
     {
         EFYCategoryRepositroy efYCategoryRepository;
 
+        public YCategoryMannager()
+        {
+            efYCategoryRepository = new EFYCategoryRepositroy();
+        }
+
         public YCategory GetById(int id)
         {
-            throw new NotImplementedException();
+            return efYCategoryRepository.GetById(id);
         }
 
         public List<YCategory> GetList()
         {
-            throw new NotImplementedException();
+            return efYCategoryRepository.GetAllList();
         }
 
         public void YCategoryAdd(YCategory ycategory)
         {
-            throw new NotImplementedException();
+            efYCategoryRepository.Insert(ycategory);
         }
 
         public void YCategoryDelete(YCategory ycategory)
         {
-            throw new NotImplementedException();
+            efYCategoryRepository.Delete(ycategory);   
         }
 
         public void YCategoryUpdate(YCategory ycategory)
         {
-            throw new NotImplementedException();
+            efYCategoryRepository.Update(ycategory);
         }
     }
 }
