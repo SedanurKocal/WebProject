@@ -39,10 +39,30 @@ namespace LayerDA.Repositories
             c.SaveChanges();
         }
 
+        public void Delete(YBlog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<YBlog> GetAllList()
+        {
+            throw new NotImplementedException();
+        }
+
         public YBlog GetById(int id)
         {
             using var c = new Context();
             return c.YBlogs.Find(id);
+        }
+
+        public void Insert(YBlog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(YBlog t)
+        {
+            throw new NotImplementedException();
         }
     }
 }

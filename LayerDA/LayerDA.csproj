@@ -23,8 +23,4 @@
     <ProjectReference Include="..\LayerE\LayerE.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="EntityFramework\" />
-  </ItemGroup>
-
 </Project>

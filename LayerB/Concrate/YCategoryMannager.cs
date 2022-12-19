@@ -1,5 +1,5 @@
 ﻿using LayerB.Abstract;
-using LayerDA.Repositories;
+using LayerDA.EntityFramework;
 using LayerE.Concrate;
 using System;
 using System.Collections.Generic;
@@ -11,7 +11,8 @@ namespace LayerB.Concrate
 {
     public class YCategoryMannager : IYCategoryService
     {
-        YCategoryRepository ycategoryRepository =new YCategoryRepository();
+        EFYCategoryRepositroy efYCategoryRepository;
+
         public YCategory GetById(int id)
         {
             throw new NotImplementedException();
@@ -24,14 +25,7 @@ namespace LayerB.Concrate
 
         public void YCategoryAdd(YCategory ycategory)
         {
-            if(ycategory.NameYCategory!="" && ycategory.DescriptionYCategory!=""&& ycategory.NameYCategory.Length>4 && ycategory.StatusYCategory == true)
-            {
-                ycategoryRepository.CategoryAdd(ycategory);
-            }
-            else
-            {
-                //Hata
-            }
+            throw new NotImplementedException();
         }
 
         public void YCategoryDelete(YCategory ycategory)

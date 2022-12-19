@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LayerDA.Abstract
 {
-    public interface IAskUsDal: IGenericDal<YAskUs>
+    public interface IYAskUsDal: IGenericDal<YAskUs>
     {
     }
 }
