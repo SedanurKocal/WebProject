@@ -1,4 +1,5 @@
 ﻿using LayerB.Abstract;
+using LayerDA.Abstract;
 using LayerDA.EntityFramework;
 using LayerE.Concrate;
 using System;
@@ -11,36 +12,37 @@ namespace LayerB.Concrate
  {
     public class YCategoryMannager : IYCategoryService
     {
-        EFYCategoryRepositroy efYCategoryRepository;
+        IYCategoryDal _yCategoryDal;
 
-        public YCategoryMannager()
+        public YCategoryMannager(IYCategoryDal yCategoryDal)
         {
-            efYCategoryRepository = new EFYCategoryRepositroy();
+            _yCategoryDal = yCategoryDal;
         }
 
+       
         public YCategory GetById(int id)
         {
-            return efYCategoryRepository.GetById(id);
+            return _yCategoryDal.GetById(id);
         }
 
         public List<YCategory> GetList()
         {
-            return efYCategoryRepository.GetAllList();
+            return _yCategoryDal.GetAllList();
         }
 
         public void YCategoryAdd(YCategory ycategory)
         {
-            efYCategoryRepository.Insert(ycategory);
+            _yCategoryDal.Insert(ycategory);
         }
 
         public void YCategoryDelete(YCategory ycategory)
         {
-            efYCategoryRepository.Delete(ycategory);   
+            _yCategoryDal.Delete(ycategory);   
         }
 
         public void YCategoryUpdate(YCategory ycategory)
         {
-            efYCategoryRepository.Update(ycategory);
+            _yCategoryDal.Update(ycategory);
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿@using LayerE.Concrate
+@model List<YCategory>
+
+@{
+    Layout = null;
+}
+<link href="~/lib/bootsrap/dist/css/bootsrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <td>Katogori ID</td>
+        <td>Katogori Adı</td>
+        <td>Katogori Durumu</td>
+        <td>Detaylar</td>
+        <td>Sil</td>
+    </tr>
+    @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdYCategory</td>
+                <td>@item.NameYCategory</td>
+                <td>@item.StatusYCategory</td>
+                <td><a href="#" class="btn btn-warning">Detaylar</a>/td>
+                <td><a href="#" class="btn btn-danger">Sil</a>/td>
+
+            </tr>
+        }
+    </table>
+
