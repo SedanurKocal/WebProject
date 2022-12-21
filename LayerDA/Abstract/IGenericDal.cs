@@ -13,5 +13,6 @@ namespace LayerDA.Abstract
         void Update(T t);
         List<T> GetAllList();
         T GetById(int id);
+        List<T> GetAllList(Exception<Func<T, bool>> filter);
     }
 }

@@ -10,37 +10,45 @@ namespace LayerDA.Repositories
 {
     public class GenericRepository<T> : IGenericDal<T> where T : class
     {
-        public void Delete(T t)
+		protected Context c = new Context();
+
+		public void Add(T entity)
+		{
+			c.Add(entity);
+			c.SaveChanges();
+		}
+
+		public void Delete(T t)
         {
-            using var c = new Context();
             c.Remove(t);
             c.SaveChanges();
         }
 
         public List<T> GetAllList()
         {
-            using var c = new Context();
             return c.Set<T>().ToList();
         }
 
         public T GetById(int id)
         {
-            using var c = new Context();
             return c.Set<T>().Find(id);
         }
 
         public void Insert(T t)
         {
-            using var c = new Context();
             c.Add(t);
             c.SaveChanges();
         }
 
-        public void Update(T t)
+		public List<T> GetAllList(Exception<Func<T, bool>> filter)
+		{
+			return c.Set<T>().Where(filter).ToList();
+		}
+
+		public void Update(T t)
         {
-            using var c = new Context();
             c.Update(t);
             c.SaveChanges();
         }
-    }
+	}
 }

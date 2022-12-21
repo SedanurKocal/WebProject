@@ -9,6 +9,6 @@ namespace LayerDA.Abstract
 {
     public interface IYBlogDal: IGenericDal<YBlog>
     {
-       
+        List<YBlog> GetListWithCategory();
     }
 }
