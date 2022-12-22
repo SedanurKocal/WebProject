@@ -14,5 +14,5 @@ namespace LayerDA.Abstract
         List<T> GetAllList();
         T GetById(int id);
         List<T> GetAllList(Exception<Func<T, bool>> filter);
-    }
+	}
 }

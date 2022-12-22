@@ -29,12 +29,17 @@ namespace LayerDA.Repositories
             return c.Set<T>().ToList();
         }
 
+
         public List<T> GetAllList(Abstract.Exception<Func<T, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
-        public T GetById(int id)
+      
+
+		
+
+		public T GetById(int id)
         {
             return c.Set<T>().Find(id);
         }
