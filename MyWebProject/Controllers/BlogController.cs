@@ -14,8 +14,13 @@ namespace MyWebProject.Controllers
         }
         public IActionResult YBlogReadAll(int id)
         {
-			var values = ym.GetBlogyID(id);
-			return View(values);
+			//var values = ym.GetBlogyID(id);
+			return View();
         }
-    }
+		//public IActionResult YBlogReadAll(int id)
+		//{
+		//	var values = ym.GetBlogyID(id);
+		//	return View(values);
+		//}
+	}
 }
