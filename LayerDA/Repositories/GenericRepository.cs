@@ -29,7 +29,12 @@ namespace LayerDA.Repositories
             return c.Set<T>().ToList();
         }
 
-        public T GetById(int id)
+		public List<T> GetAllList(Exception<Func<T, bool>> filter)
+		{
+			throw new NotImplementedException();
+		}
+
+		public T GetById(int id)
         {
             return c.Set<T>().Find(id);
         }
@@ -39,11 +44,6 @@ namespace LayerDA.Repositories
             c.Add(t);
             c.SaveChanges();
         }
-
-		public List<T> GetAllList(Exception<Func<T, bool>> filter)
-		{
-			return c.Set<T>().Where(filter).ToList();
-		}
 
 		public void Update(T t)
         {

@@ -38,9 +38,10 @@ public class YManager :IBYemekService
 	{
 		throw new NotImplementedException();
 	}
-	public List<YBlog> GetBlogyID(int id)
+	public List<YBlog> GetBlogByID(int id)
 	{
-		return yBlogDal.GetAllList(x => x.YBID == id);
+		//return yBlogDal.GetAllList(x => x.YBID == id);
+		throw new NotImplementedException();
 	}
 
 	public List<YBlog> GetBlogListWithCategory()
